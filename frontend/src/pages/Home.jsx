@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import Navbar from '../components/Navbar'
+import Bros from '../assets/Hero/Handshake_Light.png'
 
 const Home = () => {
   return (
@@ -8,20 +9,32 @@ const Home = () => {
         <header>
             <Navbar />
         </header>
-        <section className="hero">
-          <img src="" alt="" />
-          <div className="hero-text">
-            <h1 className="title">
-              
-            </h1>
-            <p className='text-blue-700'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fuga soluta voluptas aperiam, rem amet molestiae sit modi itaque id adipisci minus natus exercitationem totam, enim impedit! Ipsa, optio nulla.
-              Doloremque ipsa consectetur impedit, sit, consequatur, eum at vitae asperiores excepturi deleniti iste officia numquam possimus unde corporis aspernatur! Ratione exercitationem, iure obcaecati culpa amet quisquam maiores illum earum beatae.
-              Ea cupiditate reiciendis cum optio iste perspiciatis magnam eos quae sunt sapiente voluptates harum, voluptatem tempore? Dolore optio id minus, ipsum ratione esse libero eveniet cupiditate, aut impedit atque quidem.
-            </p>
-            <div className="tickets">
-              <Link to="/dashboard" className='ticket'>Raise a Ticket</Link>
-            <Link to="/dashboard" className='updates'>View Updates</Link>
+        <section className="hero relative flex flex-col items-start justify-center px-16 py-8">
+          <div className="flex flex-col gap-6 max-w-lg items-start z-10">
+            <div className="small-text w-[30ch]">
+              <p>Bridge the gap between employees and HR. One platform for all your workplace conversations</p>
+            </div>
+            <div className="heading">
+              <h1 className='text-4xl w-[12ch] font-bold text-left'>Making A Difference:</h1>
+            </div>
+            <div className="description">
+              <h1 className='text-4xl w-[15ch] font-bold text-blue-400 text-left'>Communication Starts with You</h1>
+            </div>
+          </div>
+          <img 
+            src={Bros} 
+            alt="" 
+            className="w-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-80 pointer-events-none"
+            style={{zIndex: 1}}
+          />
+        </section>
+        <section className="hero relative flex flex-col items-end justify-start px-16 poadding-bottom-8">
+          <div className="flex flex-col gap-2 max-w-lg items-end z-10 ">
+            <div className="heading">
+              <h1 className='text-4xl w-[12ch] font-bold text-right'>A Small Act Of</h1>
+            </div>
+            <div className="description">
+              <h1 className='text-4xl w-[15ch] font-bold text-blue-400 text-right'>Communication</h1>
             </div>
           </div>
         </section>
